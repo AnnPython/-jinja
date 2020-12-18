@@ -1,0 +1,39 @@
+﻿
+<html>
+        <head>
+            <title> Сводка погоды </title>
+            <h1> Сводка погоды </h1>
+        <style>
+        tr:nth-child(even) {
+          background-color: #eee;
+        }
+        tr:nth-child(odd) {
+          background-color: #fff;
+        }
+        th {
+          color: white;
+          background-color: black;
+        }
+        </style>
+        </head>
+        <body> 
+       
+         <table>
+        <tr>
+        <th>Дата</th>
+        <th>Время</th>
+        <th>Температура</th>
+        </tr>
+         <table>   
+          
+          {% for line in weather %}
+          <tr>
+              {% for d in line %}
+              <td>{{ d}}</td>
+                          
+              {% endfor %}
+          </tr>
+          {% endfor %}
+        </table>
+        </body>
+    </html>

@@ -1,0 +1,37 @@
+﻿<html>
+     <head>
+         <title> customers </title>
+         <h1> customers </h1>
+     <style>
+        tr:nth-child(even) {
+          background-color: #eee;
+        }
+        tr:nth-child(odd) {
+          background-color: #fff;
+        }
+        th {
+          color: white;
+          background-color: blue;
+        }
+      </style>
+      </head>
+        <body> 
+       
+         <table>
+          <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Adress</th>
+        <th>Email</th>
+        </tr>
+          
+          {% for line in cust %}
+          <tr>
+              {% for d in line %}
+              <td>{{ d }}</td>
+              {% endfor %}
+          </tr>
+          {% endfor %}
+        </table>
+        </body>
+ </html>

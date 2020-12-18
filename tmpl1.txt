@@ -1,0 +1,3 @@
+{% for item in medveds %}
+    PREVED! {{item}}
+{% endfor %}
